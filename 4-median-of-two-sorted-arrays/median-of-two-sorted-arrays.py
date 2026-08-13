@@ -22,21 +22,21 @@ class Solution:
             left2 = float('-inf') if cut2 == 0 else nums2[cut2 - 1]
             right2 = float('inf') if cut2 == n else nums2[cut2]
 
-            # Correct partition
+           
             if left1 <= right2 and left2 <= right1:
 
-                # Odd
+                
                 if (m + n) % 2 == 1:
                     return max(left1, left2)
 
-                # Even
+               
                 else:
                     return (max(left1, left2) + min(right1, right2)) / 2.0
 
-            # Move left
+          
             elif left1 > right2:
                 high = cut1 - 1
 
-            # Move right
+           
             else:
                 low = cut1 + 1
